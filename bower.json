@@ -1,0 +1,28 @@
+{
+  "name": "google-calendar-reminder-max-time",
+  "version": "1.0.0",
+  "authors": [
+    "Tony Branfort <tonybranfort@yahoo.com>"
+  ],
+  "description": "Function to return max minutes,hours,days or weeks given number of minutes",
+  "main": "lib/index.js",
+  "moduleType": [
+    "node"
+  ],
+  "devDependencies": {
+    "mocha":"2.2.x",
+    "expect.js": "0.3.x"
+  },
+  "keywords": [
+    "google",
+    "calendar",
+    "reminder",
+    "reminders",
+    "notification",
+    "notifications",
+    "time",
+    "human",
+    "readable"
+  ],
+  "license": "MIT"
+}
