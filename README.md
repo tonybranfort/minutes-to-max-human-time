@@ -1,4 +1,6 @@
 # minutes-to-max-human-time
+[![Build Status via Travis CI](https://travis-ci.org/tonybranfort/minutes-to-max-human-time.svg?branch=master)](https://travis-ci.org/tonybranfort/req-uscis-status)
+[![Coverage Status](https://coveralls.io/repos/tonybranfort/minutes-to-max-human-time/badge.svg?branch=master&service=github)](https://coveralls.io/github/)
 
 Takes minutes and returns the maximum whole human readable equivalent in minutes, hours, days or weeks.  Mimics Google Calendar online appointments for setting reminders (notifications).  
 

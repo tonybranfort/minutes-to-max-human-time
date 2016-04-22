@@ -9,7 +9,11 @@
   },
   "devDependencies": {
     "mocha":"2.2.x",
-    "expect.js": "0.3.x"
+    "expect.js": "0.3.x",
+    "coveralls": "2.11.x",
+    "istanbul": "0.4.x",
+    "mocha-lcov-reporter": "^1.0.0"
+
   },
   "keywords": [
     "google",
