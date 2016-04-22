@@ -1,7 +1,7 @@
 {
   "name": "minutes-to-max-human-time",
   "version": "1.0.0",
-  "description": "Function to return max minutes,hours,days or weeks given number of minutes",
+  "description": "Takes minutes and returns the maximum whole human readable equivalent in minutes, hours, days or weeks",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
