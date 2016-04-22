@@ -1,11 +1,11 @@
 {
-  "name": "google-calendar-reminder-max-time",
+  "name": "minutes-to-max-human-time",
   "version": "1.0.0",
   "description": "Function to return max minutes,hours,days or weeks given number of minutes",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tonybranfort/google-calendar-reminder-max-time"
+    "url": "https://github.com/tonybranfort/minutes-to-max-human-time"
   },
   "devDependencies": {
     "mocha":"2.2.x",

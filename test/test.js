@@ -158,6 +158,45 @@ describe('Google calendar reminder max time ',function(){
     }); 
 
   });
+
+  describe('getMinutes', function() {
+    it('should return correct minutes for passing in minutes', function() {
+      expect(gcrmt.getMinutes({timeQty: 59, timePeriod: 'minutes'})).to.be(59); 
+      expect(gcrmt.getMinutes({timeQty: 60, timePeriod: 'minutes'})).to.be(60); 
+      expect(gcrmt.getMinutes({timeQty: 61, timePeriod: 'minutes'})).to.be(61); 
+      expect(gcrmt.getMinutes({timeQty: 1441, timePeriod: 'minutes'})).to.be(1441); 
+    }); 
+    it('should return correct mintues for passing in hours', function() {
+      expect(gcrmt.getMinutes({timeQty: 1, timePeriod: 'hours'})).to.be(60); 
+      expect(gcrmt.getMinutes({timeQty: 5, timePeriod: 'hours'})).to.be(60*5); 
+      expect(gcrmt.getMinutes({timeQty: 24, timePeriod: 'hours'})).to.be(60*24); 
+    }); 
+
+    it('should return correct mintues for passing in days', function() {
+      expect(gcrmt.getMinutes({timeQty: 1, timePeriod: 'days'})).to.be(60*24*1); 
+      expect(gcrmt.getMinutes({timeQty: 5, timePeriod: 'days'})).to.be(60*24*5); 
+      expect(gcrmt.getMinutes({timeQty: 7, timePeriod: 'days'})).to.be(60*24*7); 
+    }); 
+
+    it('should return correct mintues for passing in weeks', function() {
+      expect(gcrmt.getMinutes()).not.to.be.NaN; 
+      expect(gcrmt.getMinutes({timeQty: 1, timePeriod: 'weeks'})).to.be(60*24*7*1); 
+      expect(gcrmt.getMinutes({timeQty: 2, timePeriod: 'weeks'})).to.be(60*24*7*2); 
+      expect(gcrmt.getMinutes({timeQty: 4, timePeriod: 'weeks'})).to.be(60*24*7*4); 
+    }); 
+
+    it('should return NaN if invalid time object passed in', function() {
+      // expect library uses === for to.be and to.equal assertion so 
+      //   expect(NaN) won't work directly so using goofy convert to string
+      expect(gcrmt.getMinutes() + '').to.be('NaN'); 
+      expect(gcrmt.getMinutes({}) + '').to.be('NaN');
+      expect(gcrmt.getMinutes({timeQty: 30}) + '').to.be('NaN');
+      expect(gcrmt.getMinutes({timeQty: 30, timePeriod: 'hours'}) + '').not.to.be('NaN');
+      expect(gcrmt.getMinutes({timeQty: 30, timePeriod: 'monkey'}) + '').to.be('NaN');
+      expect(gcrmt.getMinutes({timeQty: 30, timePeriod: 'day'}) + '').to.be('NaN');
+    }); 
+
+  });  // end of getMinutes()
 });
 
 
