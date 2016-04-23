@@ -1,6 +1,6 @@
 # minutes-to-max-human-time
 [![Build Status via Travis CI](https://travis-ci.org/tonybranfort/minutes-to-max-human-time.svg?branch=master)](https://travis-ci.org/tonybranfort/req-uscis-status)
-[![Coverage Status](https://coveralls.io/repos/tonybranfort/minutes-to-max-human-time/badge.svg?branch=master&service=github)](https://coveralls.io/github/)
+[![Coverage Status](https://coveralls.io/repos/github/tonybranfort/minutes-to-max-human-time/badge.svg?branch=master)](https://coveralls.io/github/tonybranfort/minutes-to-max-human-time?branch=master)
 
 Takes minutes and returns the maximum whole human readable equivalent in minutes, hours, days or weeks.  Mimics Google Calendar online appointments for setting reminders (notifications).  
 
@@ -11,6 +11,10 @@ For example:
 * 1440 minutes returns 1 day
 * 1441 minutes returns 1441 minutes
 * 100800 minutes returns 1 week  
+
+Install options: 
+* `npm install minutes-to-max-human-time`
+* `bower install minutes-to-max-human-time`
 
 ###Example: 
 
@@ -41,7 +45,7 @@ m2MaxHT.getMax(60*24*7);  // { timeQty: 1, timePeriod: 'weeks' }
 m2MaxHT.getMax(60*24*8);  // { timeQty: 8, timePeriod: 'days' }
 ```
 
-This has 2 functions: `getMax` and `getMinutes`. 
+minutes-to-max-human-time has 2 functions: `getMax` and `getMinutes`. 
 
 ###getMax(minutes, objectToUpdate, maxMinutes)
 Returns an object with these 2 parameters: 
