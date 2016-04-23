@@ -3,17 +3,21 @@
   "version": "1.0.0",
   "description": "Takes minutes and returns the maximum whole human readable equivalent in minutes, hours, days or weeks",
   "main": "lib/index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tonybranfort/minutes-to-max-human-time"
-  },
   "devDependencies": {
     "mocha":"2.2.x",
     "expect.js": "0.3.x",
     "coveralls": "2.11.x",
     "istanbul": "0.4.x",
     "mocha-lcov-reporter": "^1.0.0"
-
+  },
+  "scripts": {
+    "test": "make test",
+    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tonybranfort/minutes-to-max-human-time"
   },
   "keywords": [
     "google",
@@ -24,8 +28,13 @@
     "notifications",
     "time",
     "human",
-    "readable"
+    "readable",
+    "minutes"
   ],
   "author": "Tony Branfort",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tonybranfort/minutes-to-max-human-time/issues"
+  },
+  "homepage": "https://github.com/tonybranfort/minutes-to-max-human-time#readme"
 }
